@@ -1,6 +1,7 @@
 # The-Cat-API
 We will enlighten your days with the cutest images of our beloved cats. 
 
+
 # About # 
 Our new API will bring an even better experience to your customers with the cutest images of their dearest cats :heart:
 
@@ -11,14 +12,17 @@ With this feature, you will be able to do the following:
 
 Our API also provides the smart solution of filtering the images before they get uploaded: which means it rejects all images that have no cats in them or any inappropriate content :wink: 
 
-# Authentication #  :key:
+
+# Authentication :key:
 * Register at the following address: https://thecatapi.com/signup  
 * The key will be sent to the registered email.  
+
 
 # API path # 
 Our call will use the following path: https://api.thecatapi.com/v1
 
-# Images #  🐈
+
+# Images   🐈
 You should follow some requirements in order to upload the images. The parameters are described in the table below: 
 
 Name |  Description  | Type  | Required 
@@ -33,7 +37,8 @@ Name |  Description  | Type  | Required
 `pending` | Internal lifecycle flag. 0=false, 1=true | `integer` | No
 `approved` | Internal lifecycle flag. 0=false, 1=true | `integer` | No
 
-# Upload a specific image # 🐱
+
+# Upload a specific image  🐱
 **Endpoint**: `POST / images/upload`
 ## Purpose ##
  * Uploads a new image in the system.
@@ -73,7 +78,8 @@ Classifcation failed: correct animal not found.
 ```
 In this example, we tried to upload an image of a landscape with no cats.
 
-# Get a specific image # :octocat:
+
+# Get a specific image  :octocat:
 **Endpoint**: `GET / images/{image_id}`
 ## Purpose ##
 * Gets the image corresponding to the `image_id` parameter used as `path` parameter.
@@ -102,7 +108,8 @@ Couldn't find an image matching the passed 'id' of xxxxx.
 ```
 In case the `image_id` inserted was incorrect.
 
-# Get your uploaded images # 😽
+
+# Get your uploaded images  😽
 **Endpoint**: `GET / images`
 ## Purpose ##
 * Gets all images uploaded to your account via `/images/upload`. The results can be filtered using the `query` parameters below:
@@ -139,7 +146,8 @@ curl --location --request GET 'https://api.thecatapi.com/v1/images?limit=10' \
 ```
 *200 OK - The response body will be shown as `[ ]`. Therefore, no image will be received. 
 
-# Delete a specific image # 😿
+
+# Delete a specific image  😿
 **Endpoint**: `DELETE / images/{image_id}`
 ## Purpose ##
 * Deletes the image corresponding to the `image_id` parameter used as `path` parameter.
