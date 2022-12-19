@@ -1,7 +1,6 @@
 # The-Cat-API
 We will enlighten your days with the cutest images of our beloved cats. 
 
-
 # About # 
 Our new API will bring an even better experience to your customers with the cutest images of their dearest cats :heart:
 
@@ -12,15 +11,12 @@ With this feature, you will be able to do the following:
 
 Our API also provides the smart solution of filtering the images before they get uploaded: which means it rejects all images that have no cats in them or any inappropriate content :wink: 
 
-
 # Authentication :key:
 * Register at the following address: https://thecatapi.com/signup  
 * The key will be sent to the registered email.  
 
-
 # API path # 
 Our call will use the following path: https://api.thecatapi.com/v1
-
 
 # Images   🐈
 You should follow some requirements in order to upload the images. The parameters are described in the table below: 
@@ -36,7 +32,6 @@ Name |  Description  | Type  | Required
 `original_filename`| Original file name. | `string` | Yes
 `pending` | Internal lifecycle flag. 0=false, 1=true | `integer` | No
 `approved` | Internal lifecycle flag. 0=false, 1=true | `integer` | No
-
 
 # Upload a specific image  🐱
 **Endpoint**: `POST / images/upload`
@@ -77,7 +72,6 @@ curl --location --request POST 'https://api.thecatapi.com/v1/images/upload' \
 Classifcation failed: correct animal not found.
 ```
 In this example, we tried to upload an image of a landscape with no cats.
-
 
 # Get a specific image  :octocat:
 **Endpoint**: `GET / images/{image_id}`
@@ -146,7 +140,6 @@ curl --location --request GET 'https://api.thecatapi.com/v1/images?limit=10' \
 ```
 *200 OK - The response body will be shown as `[ ]`. Therefore, no image will be received. 
 
-
 # Delete a specific image  😿
 **Endpoint**: `DELETE / images/{image_id}`
 ## Purpose ##
@@ -160,13 +153,9 @@ Name |  Description  | Type  | Required
 curl --location --request DELETE 'https://api.thecatapi.com/v1/images/UmTtwZPFh' \
 --header 'x-api-key: live_n8dNkrkPBQ3ikGoWBN0ghgZgENg2pUlNqQCWQ9T5lxUSN8DymiPWoYOfn5bBDtI9'
 ```
-## Response samples ## 
-```
+## Response samples ##
 * 204 No Content 
-```
 This is a successful return that indicates the image has been deleted.
 * 400 - Bad Request 
-```
-INVALID_DATA
-```
+`INVALID_DATA`
 In case the `image_id` inserted was incorrect.
